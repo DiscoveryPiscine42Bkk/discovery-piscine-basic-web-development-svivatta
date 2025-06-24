@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Display the title -->
+    <h1>Piscine Web</h1>
+
+    <!-- Display two random images -->
+    <div id="image-container">
+        <!-- Images will be inserted here by JavaScript -->
+    </div>
+
+    <script>
+        // List of image URLs
+        const imageUrls = [
+            "https://via.placeholder.com/300x200?text=Image+1",
+            "https://via.placeholder.com/300x200?text=Image+2",
+            "https://via.placeholder.com/300x200?text=Image+3",
+            "https://via.placeholder.com/300x200?text=Image+4",
+            "https://via.placeholder.com/300x200?text=Image+5"
+        ];
+
+        // Function to get two random images
+        function getRandomImages() {
+            const randomImages = [];
+            while (randomImages.length < 2) {
+                const randomIndex = Math.floor(Math.random() * imageUrls.length);
+                if (!randomImages.includes(imageUrls[randomIndex])) {
+                    randomImages.push(imageUrls[randomIndex]);
+                }
+            }
+            return randomImages;
+        }
+
+        // Get two random images
+        const images = getRandomImages();
+
+        // Display the images
+        const container = document.getElementById('image-container');
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            container.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
