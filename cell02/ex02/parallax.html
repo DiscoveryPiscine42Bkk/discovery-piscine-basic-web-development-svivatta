@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: MATT;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .parallax1 {
+            background-image: url('https://s7d2.scene7.com/is/image/PetSmart/4032330'); 
+        }
+
+        .parallax2 {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQppmh5eTmnRL0StVhyN-zOjN4XAdAK-TJf0g&s');
+        }
+
+        .content {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .text {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="parallax parallax1">
+        <div class="text">Come see my future</div>
+    </div>
+
+    <div class="content">
+        <h2>Embrace the Wonder</h2>
+        <p>Exploring new paths in the unknown!</p>
+    </div>
+
+    <div class="parallax parallax2">
+        <div class="text">be the one </div>
+    </div>
+
+</body>
+</html>
