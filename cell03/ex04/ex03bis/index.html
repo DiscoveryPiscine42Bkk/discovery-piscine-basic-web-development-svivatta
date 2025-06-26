@@ -1,0 +1,64 @@
+<title>My To Do List</title>
+    <style>
+        body {
+            background-color: #f0f2ff;
+            font-family: MATT;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #ft_list {
+            width: 300px;
+            min-height: 150px;
+            border: 2px dashed #b6b7ff;
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .todo {
+            background-color: #e6e7ff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.2s;
+        }
+
+        .todo:hover {
+            background-color: #d6f1ff;
+        }
+
+        button {
+            background-color: #696cff;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2f14ff;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="newBtn">New</button>
+
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+
+</body>
+</html>
